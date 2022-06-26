@@ -12,11 +12,11 @@
 
 ## Java 동작 원리
 1. Java source code (.java) -> 사람이 이해할 수 있는 코드
-*----compile----             -> 컴퓨터가 이해 할 수 있게 전환
+----compile----             -> 컴퓨터가 이해 할 수 있게 전환
 2. Java Application (.class)
-*----  run  ----
+----  run  ----
 3. Java Virtual Machine
-*----  run  ----
+----  run  ----
 4. Computer
 
 ## Java 활용
