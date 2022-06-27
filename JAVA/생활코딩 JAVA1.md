@@ -11,11 +11,11 @@
 * 자바 코드는 끝에 세미콜론(;)
 
 ## Java 동작 원리
-* Java source code (.java) -> 사람이 이해할 수 있는 코드
+* Java source code (.java) -> 사람이 이해할 수 있는 코드    
 ----compile----            -> 컴퓨터가 이해 할 수 있게 전환
-* Java Application (.class)
+* Java Application (.class)    
 ----  run  ----
-* Java Virtual Machine
+* Java Virtual Machine    
 ----  run  ----
 * Computer
 
@@ -26,7 +26,7 @@
 3. 안드로이드 어플리케이션 만들기
 
 ## Datatype
-Number 숫자형
+Number 숫자형    
 String 문자형
 * 문자열 다루기
 ```java
@@ -54,13 +54,13 @@ public class BootSpringBootApplication {
 }
 ```
 * casting 강제로 데이터타입을 변환함 ex) (int), (double) 등
-* casting Integer => String
+* casting Integer => String    
 String f = Integer.toString(1);
 * f.getClass() -> String
 
 ## 프로그래밍이란?
-* 프로그래밍을 하는 이유
-=> 순차적이고 반복적인 작업을 기계에게 위임해서 효율적으로 수행하는것
+* 프로그래밍을 하는 이유    
+=> 순차적이고 반복적인 작업을 기계에게 위임해서 효율적으로 수행하는것    
 즉, 자동화된 처리를 하기 위해서이다.
 
 예시)
@@ -93,17 +93,17 @@ public class OkJavaGoInHome {
 ```
 
 ## 디버거
-이클립스 상단의 ![image](https://user-images.githubusercontent.com/95890510/175848628-02cf37dc-6973-456c-b4d3-e2469881d67b.png) 버튼을 눌러 실행
+이클립스 상단의 ![image](https://user-images.githubusercontent.com/95890510/175848628-02cf37dc-6973-456c-b4d3-e2469881d67b.png) 버튼을 눌러 실행    
 왼쪽 줄번호에 더블클릭 = break point를 지정함
 
 ## 입력과 출력
-* 입력받는 방법
-** import javax.swing.JOptionPane;
-** String id = JOptionPane.showInputDialog("Enter a ID");
-** 문자열만 입력 받을 수 있음
+* 입력받는 방법    
+import javax.swing.JOptionPane;    
+String id = JOptionPane.showInputDialog("Enter a ID");    
+문자열만 입력 받을 수 있음    
 
-* String => double
-** Double.parseDouble(문자열);
+* String => double    
+Double.parseDouble(문자열);
 
 * Run Configurations 설정
 1. Java application 선택
