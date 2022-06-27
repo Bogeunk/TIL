@@ -108,8 +108,8 @@ Double.parseDouble(문자열);
 * Run Configurations 설정
 1. Java application 선택
 2. Arguments 탭 선택
-3. 테스트할 입력값을 적음
-** "JAVA APT 507" "15.0" 큰따옴표로 묶음
+3. 테스트할 입력값을 적음    
+"JAVA APT 507" "15.0" 큰따옴표로 묶음
 ```java
 public class OkJavaGoInHomeInput {
 
