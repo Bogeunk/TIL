@@ -98,8 +98,8 @@ public class OkJavaGoInHome {
 
 ## 입력과 출력
 * 입력받는 방법
-import javax.swing.JOptionPane;
-String id = JOptionPane.showInputDialog("Enter a ID");
+» import javax.swing.JOptionPane;
+» String id = JOptionPane.showInputDialog("Enter a ID");
 » 문자열만 입력 받을 수 있음
 
 * String => double
