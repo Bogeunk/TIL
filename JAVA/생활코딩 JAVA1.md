@@ -98,18 +98,18 @@ public class OkJavaGoInHome {
 
 ## 입력과 출력
 * 입력받는 방법
-» import javax.swing.JOptionPane;
-» String id = JOptionPane.showInputDialog("Enter a ID");
-» 문자열만 입력 받을 수 있음
+** import javax.swing.JOptionPane;
+** String id = JOptionPane.showInputDialog("Enter a ID");
+** 문자열만 입력 받을 수 있음
 
 * String => double
-» Double.parseDouble(문자열);
+** Double.parseDouble(문자열);
 
 * Run Configurations 설정
 1. Java application 선택
 2. Arguments 탭 선택
 3. 테스트할 입력값을 적음
-» "JAVA APT 507" "15.0" 큰따옴표로 묶음
+** "JAVA APT 507" "15.0" 큰따옴표로 묶음
 ```java
 public class OkJavaGoInHomeInput {
 
