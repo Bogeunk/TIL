@@ -9,4 +9,4 @@ class Child extends Parent {
 * 조상 클래스 - 부모(parent)클래스
 * 자손 클래스 - 자식(child)클래스
 * **생성자와 초기화블럭은 상속되지 않는다.** 멤버만 상속된다.
- - 접근 제어자(access modifier)가 private 또는 ㅇefault인 멤버들은 상속되지 않는다기보다 접근이 제한되는것이다.
+ - 접근 제어자(access modifier)가 private 또는 default인 멤버들은 상속되지 않는다기보다 접근이 제한되는것이다.
