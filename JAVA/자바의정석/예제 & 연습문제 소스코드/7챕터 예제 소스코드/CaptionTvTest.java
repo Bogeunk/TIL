@@ -1,4 +1,4 @@
-class Tv {
+class Tv1 {
     boolean power;
     int channel;
 
@@ -7,7 +7,7 @@ class Tv {
     void channelDown() { --channel; }
 }
 
-class CaptionTv extends Tv {
+class CaptionTv extends Tv1 {
     boolean caption;
     void displayCaption(String text) {
         if (caption) {
