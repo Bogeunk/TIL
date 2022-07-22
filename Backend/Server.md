@@ -70,3 +70,66 @@ sudo vi /etc/init.d/httpd
 
 sudo chkconfig --add httpd
 ```
+
+## Let's Encrypt ssl 적용하기
+* 참고 : https://softone.tistory.com/64
+### 설치순서
+1. Apache Conf 설정
+2. Certbot 설치 및 인증서 생성
+3. https (443 port) 방화벽 해제
+* 선택. 인증서 자동갱신 설정
+* bogeun.ga 도메인으로 진행
+
+### 1-1. Apache Conf 설정
+* ssl 설정을 위해 가상 호스트가 설정되어 있어야한다.
+```
+# vi /etc/httpd/conf/httpd.conf 
+
+# 본인의 도메인에 맞서 서버 도매인 적용 
+ServerName bogeun.ga:80 
+
+# 해당 설치 문서 root 설정 (default)
+DocumentRoot "/var/www/html"
+```
+
+### 1-2. 가상호스트 설정
+```
+# vi /etc/httpd/conf.d/httpd-vhost.conf
+
+<VirtualHost *:80>
+DocumentRoot "/var/www/html"
+ServerName bogeun.ga
+</VirtualHost>
+```
+
+### 1-3. SSL 접속 도메인 설정
+```
+# vi /etc/httpd/conf.d/ssl.conf
+
+<VirtualHost *:443>
+DocumentRoot "/var/www/html"
+ServerName bogeun.ga:443
+```
+
+### 2-1. Cerbot 설치
+```
+# yum install certbot-apache
+// 설치하며 나오는 질문에 yes, 이메일을 입력하면 된다.
+```
+
+### 2-2. 설정된 ssl확인
+```
+# vi /etc/httpd/conf.d/ssl.conf
+
+SSLCertificateFile /etc/letsencrypt/live/bogeun.ga/cert.pem
+SSLCertificateKeyFile /etc/letsencrypt/live/bogeun.ga/privkey.pem
+SSLCertificateChainFile /etc/letsencrypt/live/bogeun.ga/chain.pem
+```
+
+### 3. 방화벽 443 포트 해제
+1. firewall-cmd --list-all // 현재 방화벽 확인
+2. firewall-cmd --permanent --zone=public --add-port=443/tcp // 443포트 추가
+3. firewall-cmd --reload // 방화벽 리로드
+
+### 추가
+* #systemctl restart httpd // Apache 서버 재시작
